@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .field {
+            border: 1px solid;
+            display: flex;
+        }
+
+        @keyframes projectile {
+            0%{
+                left: 0px ;
+               
+            }
+                
+            30%{
+                top: 350px;
+               
+            
+            }
+            100%{
+                left: 700px;
+                top: 450px;
+            }
+            
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: red;
+            position: relative;
+           top: 450px;
+            /* transition: transform 1s ease-out 0.3s; */
+            /* animation: projectile 3s ease-out 0s 1 forwards alternate;
+             */
+        }
+
+        .field:hover .ball{
+           
+            animation: projectile 3s ease-out 0.3s 1 forwards alternate;
+        }
+        
+
+        .bat {
+            transition: transform 0.2s ease-in;
+        }
+
+        .field:hover .bat {
+            transform: rotate(-60deg);
+            transform-origin: top right;
+        }
+        .playground{
+            /* border: 1px solid green; */
+          
+            height: 500px;
+            width: 100%;
+          
+            margin-left: 195px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="field">
+        <img class="bat" src="bat.png" alt="">
+        <div class="playground">
+            <div class="ball"></div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
